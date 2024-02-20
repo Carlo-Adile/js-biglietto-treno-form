@@ -79,11 +79,12 @@
     </nav>
   </header>
   <main id="site_main">
-    <section id="ticket_service">
+    <section id="ticket_service" class="h-100 d-flex align-items-center">
       <div class="container">
-        <div class="row flex-column gap-2 p-3">
+        <div class="row flex-column align-items-center gap-4">
           <div class="col">
-            <div class="card">
+            <!-- generate your ticket -->
+            <div class="card" id="generateTicket">
               <div class="card-header">
                 Calcola il prezzo del tuo biglietto
               </div>
@@ -116,6 +117,7 @@
                     </div>
                   </div>
                 </div>
+                <!-- actions -->
                 <div class="row w-100 justify-content-center">
                   <div class="col d-flex justify-content-center gap-3">
                     <button type="button" class="btn btn-secondary">Genera</button>
@@ -125,13 +127,45 @@
               </div>
             </div>
           </div>
+          <!-- check your ticket -->
           <div class="col">
-            <div class="card">
+            <div class="card" id="yourTicket">
               <div class="card-header">
-                Il tuo biglietto
+                Controlla il tuo biglietto
               </div>
               <div class="card-body">
-                prova
+                <div class="row">
+                  <!-- passengers list -->
+                  <div class="col-3 bg-secondary debug">
+                    <p id="passengerName">
+                      <label for="passengerName">
+                        nome del passeggero
+                      </label>
+                    </p>
+                  </div>
+                  <div class="col debug">
+                    <ul class="list-unstyled d-flex flex-row justify-content-around mx-auto">
+                      <li>
+                        <span>Tariffa</span>
+                      </li>
+                      <li>
+                        <span>
+                          Carrozza
+                        </span>
+                      </li>
+                      <li>
+                        <span>
+                          Codice CP
+                        </span>
+                      </li>
+                      <li>
+                        <span>
+                          Costo biglietto
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

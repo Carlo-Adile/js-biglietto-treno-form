@@ -23,5 +23,12 @@ body{
 }
 
 #ticket_service{
-  
+
 }
+
+#generateTicket,
+#yourTicket
+{
+  height:40vh;
+}
+
