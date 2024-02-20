@@ -78,8 +78,66 @@
       </div>
     </nav>
   </header>
-  <main>
-    
+  <main id="site_main">
+    <section id="ticket_service">
+      <div class="container">
+        <div class="row flex-column gap-2 p-3">
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                Calcola il prezzo del tuo biglietto
+              </div>
+              <div class="card-body">
+                <!-- add ticket info here -->
+                <div class="row mx-auto">
+                  <div class="col">
+                    <div class="mb-3 text-center">
+                      <label for="ticketName" class="form-label">Nome e cognome</label>
+                      <input type="text" class="form-control" id="ticketName"
+                        placeholder="Inserire Nome e Cognome">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-3 text-center">
+                      <label for="ticketKm" class="form-label">km da percorrere</label>
+                      <input type="text" class="form-control" id="ticketKm"
+                        placeholder="Inserire i km da percorrere">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-3 text-center">
+                      <label for="ticketDiscount" class="form-label">Fascia d'età</label>
+                      <select class="form-select" id="ticketDiscount" aria-label="Default select example">
+                        <option selected>Selezionare la tipologia di tariffa</option>
+                        <option value="1">Minorenne</option>
+                        <option value="2">Senior</option>
+                        <option value="3">Regolare</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row w-100 justify-content-center">
+                  <div class="col d-flex justify-content-center gap-3">
+                    <button type="button" class="btn btn-secondary">Genera</button>
+                    <button type="button" class="btn btn-secondary">Annulla</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                Il tuo biglietto
+              </div>
+              <div class="card-body">
+                prova
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer>
     <!-- place footer here -->

@@ -1,6 +1,13 @@
 .debug{
   border:1px solid black;
 }
+
+body{
+  height:100vh;
+  font-family: "Roboto", sans-serif;
+  font-weight:500!important;
+}
+
 #site_header{
   height:60px;
 }
@@ -10,5 +17,11 @@
 }
 
 #site_main{
+  height:calc(100% - 60px);
+    overflow-y: hidden;
+    background-color: grey;
+}
+
+#ticket_service{
   
 }
