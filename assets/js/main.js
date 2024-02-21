@@ -7,15 +7,13 @@ const ageElement = document.getElementById("ticket-age");
 const priceKm = 0.21;
 
 document.querySelector('form').addEventListener('submit',
-  function(e){
-    
-    
+  function(){
 
     const name = nameElement.value;
     const km = kmElement.km;
     const age = ageElement.value;
 
-    alert(name, km, age);
+    console.log(name, km, age);
   }
 )
 
