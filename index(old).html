@@ -90,16 +90,42 @@
               </div>
               <div class="card-body">
                 <!-- add ticket info here -->
-                <form action="">
-                  <input type="text" name="ticket_name" id="ticket_name" placeholder="inserisci nome e cognome">
-                  <input type="text" name="ticket_km" id="ticket_km" placeholder="inserire la distanza in km">
-                  <select name="ticket-age" id="ticket-age">
-                    <option value="1">under 18</option>
-                    <option value="2">Over 65</option>
-                    <option value="3">Regular</option>
-                  </select>
-                  <button type="submit" id="generate_button">Genera</button>
-                </form>
+                <div class="row mx-auto">
+                  <div class="col">
+                    <div class="mb-3 text-center">
+                      <label for="ticketName" class="form-label">Nome e cognome</label>
+                      <input type="text" class="form-control" id="ticket_name" placeholder="Inserire Nome e Cognome">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-3 text-center">
+                      <label for="ticketKm" class="form-label">km da percorrere</label>
+                      <input type="text" class="form-control" id="ticket_km" placeholder="Inserire i km da percorrere">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- scegli l'opzione -->
+                    <div class="mb-3 text-center">
+                      <label for="ticketAge" class="form-label">Fascia d'età</label>
+                      <select class="form-select" id="ticketAge" aria-label="Default select example">
+                        <option selected>Selezionare la tipologia di tariffa</option>
+                        <option value="1">Under 18</option>
+                        <option value="2">Over 65</option>
+                        <option value="3">Regolare</option>
+                      </select>
+                      <button type="submit" id="generate_button">
+                        Genera
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- actions -->
+                <!-- <div class="row w-100 justify-content-center">
+                  <div class="col d-flex justify-content-center gap-3">
+                    <button type="button" class="btn btn-secondary" id="generate_button">Genera</button>
+                    <button type="button" class="btn btn-secondary">Annulla</button>
+                  </div>
+                </div> -->
               </div>
             </div>
           </div>
