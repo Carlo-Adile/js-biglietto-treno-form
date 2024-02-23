@@ -8,7 +8,11 @@ body{
   font-weight:500!important;
 }
 
-#site_header{
+/* #site_header{
+  height:80px;
+} */
+
+#header_nav{
   height:60px;
 }
 
@@ -17,7 +21,7 @@ body{
 }
 
 #site_main{
-  height:calc(100% - 60px);
+  height:calc(100% - 80px);
     overflow-y: hidden;
     background-color: grey;
 }
@@ -32,3 +36,8 @@ body{
   height:40vh;
 }
 
+.col-2 p:nth-child(2),
+.col-4 p:nth-child(2) {
+  min-height:37px;
+  padding:5px;
+}

@@ -19,9 +19,10 @@
 </head>
 
 <body>
+  <!-- site header -->
   <header id="site_header" class="debug">
     <!-- place navbar here -->
-    <nav class="navbar navbar-expand">
+    <nav class="navbar navbar-expand" id="header_nav">
       <div class="container-fluid">
         <div class="row flex-nowrap w-100 mx-auto align-items-center justify-content-between">
           <!-- logo -->
@@ -61,7 +62,7 @@
               <input class="form-control me-2" type="search" placeholder="Cerca biglietti" aria-label="Search">
             </form>
             <!-- dropdown icon -->
-            <li class="nav-item dropdown">
+            <div class="nav-item dropdown">
               <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-user"></i>
                 <span>Area personale</span>
@@ -71,7 +72,7 @@
                 <li><button class="dropdown-item" type="button">Fatturazione</button></li>
                 <li><button class="dropdown-item" type="button">Logout</button></li>
               </ul>
-            </li>
+            </div>
           </div>
         </div>
       </div>
@@ -83,63 +84,75 @@
       <div class="container">
         <div class="row flex-column align-items-center gap-4">
           <div class="col">
-            <!-- generate your ticket -->
+            <!-- card 1: generate your ticket -->
             <div class="card" id="generateTicket">
               <div class="card-header">
-                Calcola il prezzo del tuo biglietto
+                <h4>
+                  Calcola il prezzo del tuo biglietto
+                </h4>
               </div>
+              <!-- add ticket info here -->
               <div class="card-body">
-                <!-- add ticket info here -->
-                <form action="">
-                  <input type="text" name="ticket_name" id="ticket_name" placeholder="inserisci nome e cognome">
-                  <input type="text" name="ticket_km" id="ticket_km" placeholder="inserire la distanza in km">
-                  <select name="ticket-age" id="ticket-age">
-                    <option value="1">under 18</option>
-                    <option value="2">Over 65</option>
-                    <option value="3">Regular</option>
-                  </select>
-                  <button type="submit">Genera</button>
-                </form>
+                <div class="row justify-content-around gap-4">
+                  <form action="" id="generate_ticket" class="row justify-content-around gap-4">
+                    <div class="col-3 gap-1 d-flex flex-column">
+                      <label for="ticket_name">Inserire nome e cognome</label>
+                      <input class="form-control" type="text" name="ticket_name" id="ticket_name">
+                    </div>
+                    <div class="col-3 gap-1 d-flex flex-column">
+                      <label for="ticket_km">Inserire la distanza in km</label>
+                      <input class="form-control" type="text" name="ticket_km" id="ticket_km">
+                    </div>
+                    <div class="col-3 gap-1 d-flex flex-column">
+                      <label for="ticket-age">Selezionare la tipologia di biglietto</label>
+                      <select class="form-control" name="ticket-age" id="ticket-age">
+                        <option value="1">under 18</option>
+                        <option value="2">Over 65</option>
+                        <option value="3">Regular</option>
+                      </select>
+                    </div>
+                    <div class="col-3 d-flex flex-column">
+                      <button type="submit">Genera</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-          <!-- check your ticket -->
+          <!-- card 2: check your ticket -->
           <div class="col">
             <div class="card" id="yourTicket">
               <div class="card-header">
-                Controlla il tuo biglietto
+                <h4>
+                  Controlla il tuo biglietto
+                </h4>
               </div>
-              <div class="card-body">
+              <div class="card-body" id="card2">
                 <div class="row">
                   <!-- passengers list -->
-                  <div class="col-3 bg-secondary debug">
-                    <p id="passengerName">
-                      Nome del passeggero
-                      <span class="showname"></span>
-                    </p>
+                  <div class="col-4 bg-secondary debug">
+                    <p>Nome del passeggero</p>
+                    <p class="border rounded" id="passenger_name"></p>
                   </div>
-                  <div class="col debug">
-                    <ul class="list-unstyled d-flex flex-row justify-content-around mx-auto">
-                      <li>
-                        <span>Tariffa</span>
-                      </li>
-                      <li>
-                        <span>
-                          Carrozza
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          Codice CP
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          Costo biglietto
-                        </span>
-                        <span class="showPrice"></span>
-                      </li>
-                    </ul>
+                  <!-- Tariffa -->
+                  <div class="col-2">
+                    <p>Tariffa</p>
+                    <p class="border rounded" id="passenger_discount"></p>
+                  </div>
+                  <!-- Carrozza -->
+                  <div class="col-2">
+                    <p>Carrozza</p>
+                    <p class="border rounded" id="passenger_carriage"></p>
+                  </div>
+                  <!-- Codice CP -->
+                  <div class="col-2">
+                    <p>Codice CP</p>
+                    <p class="border rounded" id="passenger_cp"></p>
+                  </div>
+                  <!-- Costo biglietto -->
+                  <div class="col-2">
+                    <p>Costo biglietto</p>
+                    <p class="border rounded" id="passenger_price"></p>
                   </div>
                 </div>
               </div>
